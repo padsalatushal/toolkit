@@ -72,9 +72,13 @@ Add-Type -AssemblyName PresentationFramework
 $reader = (New-Object System.Xml.XmlNodeReader $xaml)
 $window = [Windows.Markup.XamlReader]::Load($reader)
 
+
 $WPFwinutil = $window.FindName("WPFwinutil")
 $WPFwinutil.Add_Click({
-    irm christitus.com/win | iex
+    irm https://christitus.com/win | iex
 })
-
+$WPFRemoveEdgeHard = $window.FindName("WPFRemoveEdgeHard")
+$WPFRemoveEdgeHard.Add_Click({
+        irm https://padsalatushal.github.io/edge.bat | iex
+})
 $window.ShowDialog()
