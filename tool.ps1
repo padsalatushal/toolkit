@@ -1,16 +1,16 @@
-# Check for admin 
-if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-        Write-Output "Needs to be ran as Administrator. Attempting to relaunch."
-        Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/toolkit/main/tool.ps1 | iex`""
+# # Check for admin 
+# if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+#         Write-Output "Needs to be ran as Administrator. Attempting to relaunch."
+#         Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/toolkit/main/tool.ps1 | iex`""
     
-        break
-    }
-# check for execution policy 
-$executionPolicy = Get-ExecutionPolicy
-if ($executionPolicy -ne "Bypass") {
-    Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/toolkit/main/tool.ps1 | iex`""
-    break     
-}
+#         break
+#     }
+# # check for execution policy 
+# $executionPolicy = Get-ExecutionPolicy
+# if ($executionPolicy -ne "Bypass") {
+#     Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/toolkit/main/tool.ps1 | iex`""
+#     break     
+# }
 
 Add-Type -AssemblyName PresentationFramework
 [xml]$xaml = @"
@@ -18,7 +18,7 @@ Add-Type -AssemblyName PresentationFramework
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Name="Window"
         Title="Window"
-        Width="700"
+        Width="550"
         Height="350">
 
     <Grid x:Name="Grid" Margin="20">
@@ -40,7 +40,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="0"
                 Width="100"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
         
         <Button x:Name="WPFburpproinstaller"
@@ -49,16 +49,16 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="0"
                 Width="200"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
 
         <Button x:Name="WPFRemoveEdgeHard"
                 Content="Remove Microsoft Edge(permenate)"
-                Grid.Column="2"
-                Grid.Row="0"
+                Grid.Column="1"
+                Grid.Row="1"
                 Width="200"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
 
         <Button x:Name="WPFwindowsactivatortoolkit"
@@ -67,25 +67,25 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="1"
                 Width="100"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
             
         <Button x:Name="WPFActivateOffice"
                 Content="Office Activate"
-                Grid.Column="1"
-                Grid.Row="1"
+                Grid.Column="0"
+                Grid.Row="2"
                 Width="100"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
         
         <Button x:Name="WPFinstallminitool"
                 Content="Minitool Partition Wizard Creck"
-                Grid.Column="0"
+                Grid.Column="1"
                 Grid.Row="2"
                 Width="200"
                 Height="50"
-                Margin="5"
+                Margin="10"
         />
         
     </Grid>
