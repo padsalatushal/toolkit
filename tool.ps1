@@ -18,7 +18,7 @@ Add-Type -AssemblyName PresentationFramework
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Name="Window"
         Title="Window"
-        Width="550"
+        Width="450"
         Height="350">
 
     <Grid x:Name="Grid" Margin="20">
@@ -40,7 +40,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="0"
                 Width="100"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
         
         <Button x:Name="WPFburpproinstaller"
@@ -49,7 +49,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="0"
                 Width="200"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
 
         <Button x:Name="WPFRemoveEdgeHard"
@@ -58,7 +58,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="1"
                 Width="200"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
 
         <Button x:Name="WPFwindowsactivatortoolkit"
@@ -67,7 +67,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="1"
                 Width="100"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
             
         <Button x:Name="WPFActivateOffice"
@@ -76,7 +76,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="2"
                 Width="100"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
         
         <Button x:Name="WPFinstallminitool"
@@ -85,7 +85,7 @@ Add-Type -AssemblyName PresentationFramework
                 Grid.Row="2"
                 Width="200"
                 Height="50"
-                Margin="10"
+                Margin="15"
         />
         
     </Grid>
