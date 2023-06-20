@@ -2,7 +2,7 @@ echo "`n`t`tDownloading Minitool Partitio Wizard ...."
 Start-BitsTransfer -Source "https://raw.githubusercontent.com/padsalatushal/toolkit/main/assets/Minitool%20Partition%20Wizard%2012.7/Setup.exe" -Destination "minitool.exe"
 echo "`n`t`t Minitool Downloaded, let's start the Installation process"
 Write-Host "Staring Installtion.." 
-Start-Process -FilePath .\minitool.exe
+.\minitool.exe
 Write-Host "If Installtion is done press any key to contiue"
 Pause
 
