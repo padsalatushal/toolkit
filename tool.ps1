@@ -70,8 +70,8 @@ Add-Type -AssemblyName PresentationFramework
                 Margin="5"
         />
             
-        <Button x:Name="ActivateOffice"
-                Content="Button 5"
+        <Button x:Name="WPFActivateOffice"
+                Content="Office Activate"
                 Grid.Column="1"
                 Grid.Row="1"
                 Width="100"
@@ -99,8 +99,6 @@ $WPFRemoveEdgeHard.Add_Click({
 
 })
 
-
-
 $WPFburpproinstaller = $window.FindName("WPFburpproinstaller")
 $WPFburpproinstaller.Add_Click({
         Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://padsalatushal.github.io/burp_setup.ps1 | iex`""
@@ -111,6 +109,12 @@ $WPFburpproinstaller.Add_Click({
 $WPFwindowsactivatortoolkit = $window.FindName("WPFwindowsactivatortoolkit")
 $WPFwindowsactivatortoolkit.Add_Click({
         Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://massgrave.dev/get | iex`""
+
+})
+
+$WPFActivateOffice = $window.FindName("WPFActivateOffice")
+$WPFActivateOffice.Add_Click({
+        Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/Windows-Office-Activator/main/office-activate.bat | iex`""
 
 })
 
