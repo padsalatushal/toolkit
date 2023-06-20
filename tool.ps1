@@ -18,7 +18,7 @@ Add-Type -AssemblyName PresentationFramework
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Name="Window"
         Title="Window"
-        Width="600"
+        Width="700"
         Height="350">
 
     <Grid x:Name="Grid" Margin="20">
@@ -79,6 +79,15 @@ Add-Type -AssemblyName PresentationFramework
                 Margin="5"
         />
         
+        <Button x:Name="WPFinstallminitool"
+                Content="Minitool Partition Wizard Creck"
+                Grid.Column="0"
+                Grid.Row="2"
+                Width="200"
+                Height="50"
+                Margin="5"
+        />
+        
     </Grid>
 </Window>
 
@@ -115,6 +124,12 @@ $WPFwindowsactivatortoolkit.Add_Click({
 $WPFActivateOffice = $window.FindName("WPFActivateOffice")
 $WPFActivateOffice.Add_Click({
         Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/Windows-Office-Activator/main/office-activate.bat | iex`""
+
+})
+
+$WPFinstallminitool = $window.FindName("WPFinstallminitool")
+$WPFinstallminitool.Add_Click({
+        Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "-ExecutionPolicy Bypass -Command `"iwr -useb https://raw.githubusercontent.com/padsalatushal/toolkit/main/assets/Minitool%20Partition%20Wizard%2012.7/minitool_install.ps1 | iex`""
 
 })
 
