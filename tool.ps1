@@ -53,7 +53,7 @@ Add-Type -AssemblyName PresentationFramework
         />
 
         <Button x:Name="WPFRemoveEdgeHard"
-                Content="Remove Microsoft Edge(permenate)"
+                Content="Remove Microsoft Edge(permanent)"
                 Grid.Column="1"
                 Grid.Row="1"
                 Width="200"
@@ -80,7 +80,7 @@ Add-Type -AssemblyName PresentationFramework
         />
         
         <Button x:Name="WPFinstallminitool"
-                Content="Minitool Partition Wizard Creck"
+                Content="Minitool Partition Wizard Crack"
                 Grid.Column="1"
                 Grid.Row="2"
                 Width="200"
